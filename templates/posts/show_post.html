@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}{{post.title}}{% endblock title %}
+{% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
 
-<h1>{{post.title}}</h1>
+  <h1>{{ post.title }}</h1>
 
-<p>{{post.content}}</p>
-
-<p><i>By {{post.user.full_name}} on {{post.friendly_date}}</i></p>
+  <p>{{ post.content }}</p>
+  <p><i>By {{ post.user.full_name }}
+    on {{ post.friendly_date }}
+  </i></p>
 
 <form>
-    <button class="btn btn-outline-primary"
+  <button class="btn btn-outline-primary"
           formmethod="GET"
           formaction="/users/{{ post.user_id }}">Cancel</button>
   <button class="btn btn-primary"

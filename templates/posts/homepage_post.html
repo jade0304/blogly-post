@@ -12,7 +12,7 @@
 </h2>
 <p>{{ post.content }}</p>
 <p>
-<p><i>By {{post.user.full_name}} on {{post.friendly_date}}</i></p>
+  <small>By {{ post.user.full_name }} on {{ post.friendly_date }}</small>
 </p>
 {% endfor %}
 
